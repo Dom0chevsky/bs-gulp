@@ -1,0 +1,20 @@
+/* Responsive breakpoint mixin */
+@mixin bp($p) {
+  @if $p == xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $p == sm {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $p == md {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $p == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

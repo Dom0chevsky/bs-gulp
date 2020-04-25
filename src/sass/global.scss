@@ -1,10 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap';
+
+@include bp(lg){
+    
+    a.a1 { 
+        font-size: 14px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    } 
+
+}
+
+a.a2 {
+    @include bp(lg){
+        font-size: 14px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    
+    color: red;
+}
+
 body {
     background-color: #f2f2f2;
     font-family: "Open Sans", sans-serif;
     font-weight: 100;
     font-size: 16px;
-    height: 100%
+    height: 100%;
 }
 .head_position {
     height: 185px;
@@ -29,10 +50,10 @@ body {
 }
 .nav-but{
     display: inline-block;
-    background-color: #f4e234 !important;
+    background-color: $color1 !important;
 }
 .btn-1 {
-    background-color: #f4e234;
+    background-color: $color1;
     color: #1b2445;
     border-radius: 2px;
     margin-top: -5px;
@@ -41,10 +62,12 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
-.btn-1:hover {
-    background: #404e80;
-    border-color: #404e80;
-    color: #FFFFFF;
+.btn-1 {
+    &:hover {
+        background: #404e80;
+        border-color: #404e80;
+        color: #FFFFFF;
+    }
 }
 .phone {
     color: #fffefa !important;
@@ -58,7 +81,7 @@ body {
     font-weight: 100;
 }
 .elected:active,.elected:hover {
-    color: #f4e234;
+    color: $color1;
     text-decoration: none;
 }
 
@@ -158,8 +181,8 @@ body {
 }
 .btn-primary {
     color: #FFFFFB;
-    background-color: #f4e234;
-    border-color: #f3df1c;
+    background-color: $color1;
+    border-color: $color1;
 }
 .b-btn {
     border-radius: 2px;
@@ -267,7 +290,7 @@ body {
     padding-right: 2px;
 }
 .btn-default {
-    color: #f4e234;
+    color: $color1;
     font-size: 23px;
 }
 .menu-mob {
@@ -280,7 +303,7 @@ body {
 
 @media (min-width: 991px) {
  .img_nav {
-    width: 30px;
+    width: 30px;}
 }
 
 
@@ -362,3 +385,5 @@ body {
         width: 20px;
     }
 }
+
+
