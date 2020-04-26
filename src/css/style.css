@@ -1,23 +1,5 @@
 /* Responsive breakpoint mixin */
 @import 'https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap';
-@media (min-width: 1200px) {
-  a.a1 {
-    font-size: 14px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-  }
-}
-a.a2 {
-  color: red;
-}
-@media (min-width: 1200px) {
-  a.a2 {
-    font-size: 14px;
-    padding-bottom: 16px;
-    padding-top: 16px;
-  }
-}
-
 body {
   background-color: #f2f2f2;
   font-family: "Open Sans", sans-serif;
@@ -42,10 +24,6 @@ body {
 
 .b-nav {
   display: inline-block;
-}
-
-.b-nav-logo {
-  display: inline-block !important;
 }
 
 .b-nav-private {
@@ -252,6 +230,8 @@ body {
 
 .dropdown:hover > .dropdown-menu {
   display: block;
+  background-color: #404e80;
+  color: #fff;
 }
 
 .dropdown-menu {
@@ -302,10 +282,6 @@ body {
 .navbar-collapse {
   padding-right: 0;
   padding-left: 0;
-}
-
-.nav a {
-  text-transform: uppercase;
 }
 
 .b-header_description {
