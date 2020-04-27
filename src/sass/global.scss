@@ -98,7 +98,7 @@ body {
         font-weight: bold;
         color: $color2;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 14px !important;
         padding-bottom: 16px;
         padding-top: 16px;
     }
@@ -143,15 +143,22 @@ body {
     background-color: $color3;
     color: $colorfont;
 } 
-.dropdown, .dropdown-menu, .dropdown-toggle {
+.dropdown, .dropdown-menu, {
     border-radius: 0;
     border: 0;
+    color: $colorfont; 
     &:hover {
         background-color: $color3;
-        color: $colorfont;   
+        color: $colorfont; 
+        a {
+             color: $colorfont;
+        }  
     }
 }
 
+.header-menu ul.nav ul a:hover {
+    color: #aab0c5;
+}
 
 .h-mobile-menu {
     color: $colorfont;
