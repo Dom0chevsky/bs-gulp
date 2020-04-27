@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 function build(done) {
@@ -14,6 +15,9 @@ function build(done) {
 			//outputStyle: 'compressed'
 		}))
 		.on('error', console.error.bind(console))
+		.pipe(autoprefixer({
+            cascade: false
+		}))
 		.pipe( gulp.dest('./build/css/') );
 
 	done();
@@ -44,7 +48,7 @@ function sync(done) {
   	  	tunnel: false,
         host: 'localhost',
         port: 9000,
-        logPrefix: "hardkod",
+        logPrefix: "domokod",
         logLevel: 'debug',
         online: true
 	});
