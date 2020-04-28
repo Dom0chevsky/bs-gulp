@@ -79,6 +79,7 @@ body {
     z-index: 1000;
     width: 100%;
     top: 0;
+    transition: .5s;
 }
 .header-menu {
     margin-bottom: 0;
@@ -88,6 +89,7 @@ body {
     width: 100%;
     z-index: 1000;
     background-color: #e3e5ee;
+    transition: .5s;
     .navbar-collapse {
         padding-right: 0;
         padding-left: 0;
